@@ -15,34 +15,14 @@ function App() {
   return (
     <>
       <header>
-        <div
-          className="navbar-outside"
-          onClick={() => setIsShowing(!isShowing)}
-          style={isShowing ? { display: "block" } : { display: "none" }}
-        ></div>
         <div className="logo">
           <img src={logo} alt="logo" />
           <hr />
         </div>
-        <div
-          className="bars-navbar"
-          style={isShowing ? { display: "block" } : { display: "none" }}
-        >
-          <img src={iconOpen} alt="iconOpen" />
+        <div onClick={() => setIsShowing(!isShowing)} className="bars-navbar">
+          <img src={isShowing ? iconOpen : iconClose} alt="iconOpen" />
         </div>
-        <ul
-          className="navbar"
-        >
-          <div
-            className="close"
-            style={isShowing ? { display: "block" } : { display: "none" }}
-          >
-            <img
-              src={iconClose}
-              alt="iconClose"
-              onClick={() => setIsShowing(!isShowing)}
-            />
-          </div>
+        <ul className={`navbar ${isShowing&&'open'}`}>
           <li>
             <Link
               to="/"

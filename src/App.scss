@@ -13,6 +13,10 @@ header {
     padding-left: 2em;
     margin-top: 1em;
     position: relative;
+    @media screen and (max-width: 375px) {
+      padding-left: 0;
+      left: -56px;
+    }
     img {
       width: 3em;
     }
@@ -41,26 +45,59 @@ header {
       height: 5em;
       margin-top: auto;
     }
+    @media screen and (max-width: 375px) {
+      @include mixin.displayFlex(column, flex-start, flex-start);
+      position: fixed;
+      height: 100%;
+      top: 0;
+      right: 0;
+      padding-top: 20vh;
+      padding-left: 10px;
+    }
     margin-top: 2em;
     .close {
       display: none;
     }
     li {
       padding: 0 10px;
+    @media screen and (max-width: 375px) {
+      padding-bottom:20px ;
+    }
+
     }
   }
 }
 li {
-  a{
+  a {
     padding-bottom: 1.3em;
     @media screen and (max-width: 768px) {
       padding-bottom: 1.7em;
     }
-
+    @media screen and (max-width: 375px) {
+      padding-bottom: 0;
+    }
   }
   strong {
     @media screen and (max-width: 768px) {
       display: none;
     }
+    @media screen and (max-width: 375px) {
+      display: inline-block;
+    }
+  }
+}
+.bars-navbar {
+  display: none;
+  @media screen and (max-width: 375px) {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    right: 1em;
+  }
+}
+.open {
+  display: block;
+  @media screen and (max-width: 375px) {
+    display: none !important;
   }
 }
