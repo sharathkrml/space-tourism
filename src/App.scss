@@ -17,6 +17,9 @@ header {
       width: 3em;
     }
     hr {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
       position: absolute;
       width: 80%;
       top: 1.5em;
@@ -33,12 +36,31 @@ header {
     width: 65%;
     background-color: rgba(128, 109, 109, 0.2);
     backdrop-filter: blur(10px);
+    @media screen and (max-width: 768px) {
+      top: auto;
+      height: 5em;
+      margin-top: auto;
+    }
     margin-top: 2em;
     .close {
       display: none;
     }
-    li{
+    li {
       padding: 0 10px;
+    }
+  }
+}
+li {
+  a{
+    padding-bottom: 1.3em;
+    @media screen and (max-width: 768px) {
+      padding-bottom: 1.7em;
+    }
+
+  }
+  strong {
+    @media screen and (max-width: 768px) {
+      display: none;
     }
   }
 }
