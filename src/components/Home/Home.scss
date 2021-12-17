@@ -1,0 +1,13 @@
+.Home {
+  background-image: url(../../assets/home/background-home-desktop.jpg);
+  background-position:center;
+  @media screen and (max-width: 768px) {
+    background-image: url(../../assets/home/background-home-tablet.jpg);
+  }
+  @media screen and (max-width: 375px) {
+    background-image: url(../../assets/home/background-home-mobile.jpg);
+  }
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+}

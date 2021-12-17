@@ -1,0 +1,11 @@
+.destination{
+    background:url(../../assets/destination/background-destination-desktop.jpg);
+    @media screen and (max-width: 768px) {
+        background: url(../../assets/destination/background-destination-tablet.jpg);
+      }
+      @media screen and (max-width: 375px) {
+        background: url(../../assets/destination/background-destination-mobile.jpg);
+      }
+    width: 100vw;
+    height: 100vh;
+}

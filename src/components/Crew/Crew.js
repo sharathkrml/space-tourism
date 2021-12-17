@@ -1,11 +1,7 @@
-import React from 'react'
-
+import React from "react";
+import "./Crew.scss";
 function Crew() {
-    return (
-        <div>
-            Crew
-        </div>
-    )
+  return <div className="Crew"></div>;
 }
 
-export default Crew
+export default Crew;

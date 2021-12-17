@@ -1,0 +1,12 @@
+.Crew {
+  background: url(../../assets/crew/background-crew-desktop.jpg);
+
+  @media screen and (max-width: 768px) {
+    background: url(../../assets/crew/background-crew-tablet.jpg);
+  }
+  @media screen and (max-width: 375px) {
+    background: url(../../assets/crew/background-crew-mobile.jpg);
+  }
+  width: 100vw;
+  height: 100vh;
+}

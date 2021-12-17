@@ -1,0 +1,12 @@
+.Technology {
+  background: url(../../assets/technology/background-technology-desktop.jpg);
+
+  @media screen and (max-width: 768px) {
+    background: url(../../assets/technology/background-technology-tablet.jpg);
+  }
+  @media screen and (max-width: 375px) {
+    background: url(../../assets/technology/background-technology-mobile.jpg);
+  }
+  width: 100vw;
+  height: 100vh;
+}

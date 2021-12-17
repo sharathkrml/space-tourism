@@ -1,7 +1,7 @@
 import React from "react";
-
+import "./Technology.scss";
 function Technology() {
-  return <div>Technology</div>;
+  return <div className="Technology"></div>;
 }
 
 export default Technology;

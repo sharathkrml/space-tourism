@@ -1,11 +1,7 @@
-import React from 'react'
-
+import React from "react";
+import "./Destination.scss";
 function Destination() {
-    return (
-        <div>
-            Destination
-        </div>
-    )
+  return <div className="destination"></div>;
 }
 
-export default Destination
+export default Destination;

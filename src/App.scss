@@ -1,0 +1,44 @@
+@forward "./general";
+@forward "./fonts.scss";
+@use "./mixins.scss" as mixin;
+
+header {
+  @include mixin.displayFlex(row, center, center);
+  // border: 2px solid white;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  .logo {
+    width: 50%;
+    padding-left: 2em;
+    margin-top: 1em;
+    position: relative;
+    img {
+      width: 3em;
+    }
+    hr {
+      position: absolute;
+      width: 80%;
+      top: 1.5em;
+      right: -5%;
+      z-index: 1;
+    }
+  }
+  .navbar {
+    @include mixin.displayFlex(row, center, center);
+    font-family: "Barlow Condensed", sans-serif;
+    position: relative;
+    top: -10px;
+    height: 4em;
+    width: 65%;
+    background-color: rgba(128, 109, 109, 0.2);
+    backdrop-filter: blur(10px);
+    margin-top: 2em;
+    .close {
+      display: none;
+    }
+    li{
+      padding: 0 10px;
+    }
+  }
+}
