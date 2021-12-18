@@ -1,11 +1,51 @@
-.destination{
-    background:url(../../assets/destination/background-destination-desktop.jpg);
-    @media screen and (max-width: 768px) {
-        background: url(../../assets/destination/background-destination-tablet.jpg);
-      }
-      @media screen and (max-width: 375px) {
-        background: url(../../assets/destination/background-destination-mobile.jpg);
-      }
-    width: 100vw;
-    height: 100vh;
+.destination {
+  background: url(../../assets/destination/background-destination-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  @media screen and (max-width: 768px) {
+    background: url(../../assets/destination/background-destination-tablet.jpg);
+  }
+  @media screen and (max-width: 375px) {
+    background: url(../../assets/destination/background-destination-mobile.jpg);
+  }
+  width: 100vw;
+  height: 100vh;
+}
+.dest-banner {
+  position: relative;
+  top: 25%;
+  left: 10%;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.5em;
+}
+.dest-carousel-buttons {
+  position: absolute;
+  top: 35%;
+  left: 60%;
+  .active {
+    border-bottom: 2px solid white;
+  }
+  button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin: 0 10px;
+    padding-bottom: 10px;
+    &:hover {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.508);
+    }
+  }
+}
+.dest-body {
+  animation: slideInFromBottom 0.3s ease-in;
+
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  color: white;
+}
+.rec-arrow,
+.rec-dot {
+  display: none;
 }
