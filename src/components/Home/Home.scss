@@ -1,6 +1,8 @@
+@use "../../mixins.scss" as mixin;
+
 .Home {
   background-image: url(../../assets/home/background-home-desktop.jpg);
-  background-position:center;
+  background-position: center;
   @media screen and (max-width: 768px) {
     background-image: url(../../assets/home/background-home-tablet.jpg);
   }
@@ -10,4 +12,61 @@
   height: 100vh;
   width: 100vw;
   z-index: 0;
+  color: white;
+}
+.home-body {
+  @include mixin.displayFlex(row, center, space-evenly);
+  position: relative;
+  top:20%;
+  height: 80%;
+  margin: 0 auto;
+  width: 90%;
+  animation: slideInFromBottom 0.3s ease-in;
+}
+.explore {
+  @include mixin.displayFlex(row, center, center);
+  font-family: "Bellefair", sans-serif;
+  font-size: 1.5em;
+  position: relative;
+  // top: 20%;
+  width: 8em;
+  height: 8em;
+  color: #000;
+  border-radius: 50%;
+  background-color: white;
+  right: 10%;
+  .shaddow {
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8em;
+    height: 8em;
+    // transform: scale(1.1);
+    &:hover {
+      transform: scale(1.5);
+      background-color: rgba(128, 109, 109, 0.2);
+      backdrop-filter: blur(10px);
+    }
+  }
+}
+
+.home-text {
+  width: 50%;
+  margin-right: 10%;
+  .heading {
+    font-size: 7.5em;
+    font-family: "Bellefair", sans-serif;
+    margin: 10px;
+  }
+  p{
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.583);
+    width: 80%;
+  }
+}
+.subhead {
+  font-size: 1.2em;
+  letter-spacing: 4.25px;
+  font-family: "Barlow Condensed", sans-serif;
 }

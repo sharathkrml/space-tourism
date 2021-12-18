@@ -22,7 +22,7 @@ function App() {
         <div onClick={() => setIsShowing(!isShowing)} className="bars-navbar">
           <img src={isShowing ? iconOpen : iconClose} alt="iconOpen" />
         </div>
-        <ul className={`navbar ${isShowing&&'open'}`}>
+        <ul className={`navbar ${isShowing && "open"}`}>
           <li>
             <Link
               to="/"
