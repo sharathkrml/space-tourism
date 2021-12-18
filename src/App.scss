@@ -61,12 +61,14 @@ header {
     }
     li {
       padding: 0 10px;
-    @media screen and (max-width: 375px) {
-      padding-bottom:20px ;
-    }
-
+      @media screen and (max-width: 375px) {
+        padding-bottom: 20px;
+      }
     }
   }
+}
+.active {
+  border-bottom: 2px solid white;
 }
 li {
   a {
@@ -76,6 +78,9 @@ li {
     }
     @media screen and (max-width: 375px) {
       padding-bottom: 0;
+    }
+    &:hover {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.515);
     }
   }
   strong {

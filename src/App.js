@@ -24,25 +24,14 @@ function App() {
         </div>
         <ul className={`navbar ${isShowing && "open"}`}>
           <li>
-            <Link
-              to="/"
-              style={
-                location.pathname === "/"
-                  ? { borderBottom: "2px solid white" }
-                  : { borderBottom: "2px solid transparent" }
-              }
-            >
+            <Link to="/" className={location.pathname === "/" && "active"}>
               <strong>0 0</strong>&nbsp;H O M E
             </Link>
           </li>
           <li>
             <Link
               to="/destination"
-              style={
-                location.pathname === "/destination"
-                  ? { borderBottom: "2px solid white" }
-                  : { borderBottom: "2px solid transparent" }
-              }
+              className={location.pathname === "/destination" && "active"}
             >
               <strong>0 1</strong>&nbsp;D E S T I N A T I O N
             </Link>
@@ -50,11 +39,7 @@ function App() {
           <li>
             <Link
               to="/crew"
-              style={
-                location.pathname === "/crew"
-                  ? { borderBottom: "2px solid white" }
-                  : { borderBottom: "2px solid transparent" }
-              }
+              className={location.pathname === "/crew" && "active"}
             >
               <strong>0 2</strong>&nbsp;C R E W
             </Link>
@@ -62,11 +47,7 @@ function App() {
           <li>
             <Link
               to="/technology"
-              style={
-                location.pathname === "/technology"
-                  ? { borderBottom: "2px solid white" }
-                  : { borderBottom: "2px solid transparent" }
-              }
+              className={location.pathname === "/technology" && "active"}
             >
               <strong>0 3</strong>&nbsp;T E C H N O L O G Y
             </Link>
