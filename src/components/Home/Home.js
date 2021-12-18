@@ -16,7 +16,6 @@ function Home() {
         </div>
         <div className="explore">
           EXPLORE
-          <div className="shaddow"></div>
         </div>
       </div>
     </div>
