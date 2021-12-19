@@ -38,3 +38,8 @@
     transform: translateX(0);
   }
 }
+@keyframes rotateImg {
+  100% {
+    rotate: 360deg;
+  }
+}

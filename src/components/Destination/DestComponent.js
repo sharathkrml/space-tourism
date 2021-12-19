@@ -13,11 +13,11 @@ function DestComponent(props) {
         <div className="dist-time">
           <div className="avg-dist">
             <p className="dist-time-title">AVG. DISTANCE</p>
-            <p>{props.distance}</p>
+            <p className="dist-time-data">{props.distance}</p>
           </div>
           <div className="est-time">
             <p className="dist-time-title">EST. TRAVEL TIME</p>
-            <p>{props.time}</p>
+            <p className="dist-time-data">{props.time}</p>
           </div>
         </div>
       </div>

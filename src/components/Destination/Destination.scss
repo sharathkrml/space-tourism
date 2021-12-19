@@ -28,6 +28,8 @@
   }
   button {
     background-color: transparent;
+    font-family: "Barlow Condensed", sans-serif;
+
     color: white;
     border: none;
     margin: 0 10px;
@@ -37,13 +39,18 @@
     }
   }
 }
+.dest-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .dest-body {
   animation: slideInFromBottom 0.3s ease-in;
-
   position: absolute;
   top: 40%;
-  width: 100%;
+  width: 90%;
   color: white;
+  margin: 0 auto;
 }
 .rec-arrow,
 .rec-dot {
