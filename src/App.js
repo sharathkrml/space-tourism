@@ -22,16 +22,21 @@ function App() {
         <div onClick={() => setIsShowing(!isShowing)} className="bars-navbar">
           <img src={isShowing ? iconOpen : iconClose} alt="iconOpen" />
         </div>
-        <ul className={`navbar ${isShowing && "open"}`}>
+        <ul className={`navbar ${isShowing ? "open" : undefined}`}>
           <li>
-            <Link to="/" className={location.pathname === "/" && "active"}>
+            <Link
+              to="/"
+              className={location.pathname === "/" ? "active" : undefined}
+            >
               <strong>0 0</strong>&nbsp;H O M E
             </Link>
           </li>
           <li>
             <Link
               to="/destination"
-              className={location.pathname === "/destination" && "active"}
+              className={
+                location.pathname === "/destination" ? "active" : undefined
+              }
             >
               <strong>0 1</strong>&nbsp;D E S T I N A T I O N
             </Link>
@@ -39,7 +44,7 @@ function App() {
           <li>
             <Link
               to="/crew"
-              className={location.pathname === "/crew" && "active"}
+              className={location.pathname === "/crew" ? "active" : undefined}
             >
               <strong>0 2</strong>&nbsp;C R E W
             </Link>
@@ -47,7 +52,9 @@ function App() {
           <li>
             <Link
               to="/technology"
-              className={location.pathname === "/technology" && "active"}
+              className={
+                location.pathname === "/technology" ? "active" : undefined
+              }
             >
               <strong>0 3</strong>&nbsp;T E C H N O L O G Y
             </Link>
