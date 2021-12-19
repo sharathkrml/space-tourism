@@ -16,7 +16,7 @@ function Destination() {
         <strong>01</strong>&nbsp; PICK YOUR DESTINATION
       </div>
 
-      <div>
+      <div className="dest-carousel">
         <div className="dest-carousel-buttons">
           <button
             className={currDest === 0 ? "active" : undefined}

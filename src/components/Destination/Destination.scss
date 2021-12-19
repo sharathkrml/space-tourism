@@ -1,12 +1,16 @@
+@use "../../mixins.scss" as mixin;
 .destination {
   background: url(../../assets/destination/background-destination-desktop.jpg);
   background-position: center;
   background-size: cover;
   @media screen and (max-width: 768px) {
     background: url(../../assets/destination/background-destination-tablet.jpg);
+    height: 160vh;
   }
   @media screen and (max-width: 375px) {
     background: url(../../assets/destination/background-destination-mobile.jpg);
+    height: 130vh;
+
   }
   width: 100vw;
   height: 100vh;
@@ -15,11 +19,38 @@
   position: relative;
   top: 25%;
   left: 10%;
+  width: 90%;
+  
+  @media screen and (max-width: 768px) {
+    top: 10%;
+    left: 10%;
+    font-size: 1em;
+  }
+  @media screen and (max-width: 375px) {
+    left: 0px;
+    width: 100%;
+    text-align: center;
+  }
   color: white;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 1.5em;
 }
+
+.dest-carousel {
+  @media screen and (max-width: 768px) {
+    @include mixin.displayFlex(row, center, center);
+    position: relative;
+    top: 10%;
+  }
+}
+
 .dest-carousel-buttons {
+  @media screen and (max-width: 768px) {
+    z-index: 10;
+    top: 14em;
+    left: auto;
+  }
+
   position: absolute;
   top: 35%;
   left: 60%;
@@ -37,6 +68,9 @@
     &:hover {
       border-bottom: 2px solid rgba(255, 255, 255, 0.508);
     }
+    @media screen and (max-width: 768px) {
+      font-size: 1em;
+    }
   }
 }
 .dest-wrapper {
@@ -51,8 +85,45 @@
   width: 90%;
   color: white;
   margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    top: 30%;
+  }
 }
 .rec-arrow,
 .rec-dot {
   display: none;
+}
+@media screen and (max-width: 500px) {
+  .dest-carousel-buttons {
+    top: 13em;
+  }
+}
+@media screen and (max-width: 470px) {
+  .dest-carousel-buttons {
+    top: 12em;
+  }
+  .dest-carousel-buttons button {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 370px) {
+  .dest-carousel-buttons {
+    top: 9em;
+  }
+  .dest-carousel-buttons button {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .dest-carousel-buttons {
+    top: 8em;
+  }
+}
+@media screen and (max-width: 280px) {
+  .dest-carousel-buttons {
+    top: 7em;
+  }
+  .dest-carousel-buttons button {
+    font-size: 0.7em;
+  }
 }

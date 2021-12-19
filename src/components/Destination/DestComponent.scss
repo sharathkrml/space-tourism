@@ -1,38 +1,93 @@
 @use "../../mixins.scss" as mixin;
 .dest-component {
   @include mixin.displayFlex(row, flex-start, center);
+  @media screen and (max-width: 768px) {
+    @include mixin.displayFlex(column, center, center);
+  }
 }
-.dest-details{
+.dest-details {
   width: 35%;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    text-align: center;
+    margin-top: 13%;
+  }
+  @media screen and (max-width: 375px) {
+    width: 90%;
+  }
 }
-.dest-desc{
+.dest-desc {
   font-size: 0.9em;
   color: rgba(255, 255, 255, 0.659);
   line-height: 20px;
   margin-bottom: 4em;
 }
 .dest-image {
+  @media screen and (max-width: 768px) {
+    @include mixin.displayFlex(row, center, center);
+  }
   img {
+    @media screen and (max-width: 768px) {
+      width: 40%;
+    }
     width: 80%;
     animation: rotateImg 50s linear infinite;
   }
 }
 .dest-title {
+  @media screen and (max-width: 768px) {
+    font-size: 4em;
+    margin: 20px 10px 10px 10px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 4em;
+  }
+  @media screen and (max-width: 470px) {
+    font-size: 4em;
+  }
+
+  @media screen and (max-width: 370px) {
+    font-size: 3em;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 2.5em;
+  }
+  @media screen and (max-width: 280px) {
+    font-size: 2em;
+  }
+
   font-size: 5em;
   font-family: "Bellefair", serif;
-  margin:15px;
+  margin: 15px;
 }
 .dist-time {
   @include mixin.displayFlex(row, flex-start, space-between);
+  @media screen and (max-width: 768px) {
+    @include mixin.displayFlex(row, flex-start, space-around);
+
+    width: 100%;
+  }
+
+  @media screen and (max-width: 375px) {
+    @include mixin.displayFlex(column, center, center);
+  }
   width: 80%;
   margin-top: 20px;
 }
-.dist-time-title{
+.dist-time-title {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 0.8em;
   margin-bottom: 0.8em;
+  @media screen and (max-width: 375px) {
+    margin-bottom: 0;
+  }
 }
-.dist-time-data{
+.dist-time-data {
   font-size: 1.4em;
   font-family: "Bellefair", serif;
+}
+.avg-dist {
+  @media screen and (max-width: 375px) {
+    margin-bottom: 0.8em;
+  }
 }
