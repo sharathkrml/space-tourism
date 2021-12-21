@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Crew.scss";
 import Carousel from "react-elastic-carousel";
 import CrewComponent from "./CrewComponent";
@@ -10,12 +10,27 @@ import anousheh from "../../assets/crew/image-anousheh-ansari.png";
 function Crew() {
   const carouselRef = useRef(null);
   const [currDest, setCurrDest] = useState(0);
+  const timeOut=2000;
+  // useEffect(() => {
+  //   if (currDest === 3) {
+  //     setTimeout(() => {
+  //       carouselRef.current.goTo(0);
+  //     }, timeOut);
+  //   }
+  // }, [currDest]);
   return (
     <div className="Crew">
       <div className="dest-banner">
         <strong>02</strong>&nbsp; MEET YOUR CREW
       </div>
-      <Carousel className="crew-carousel">
+      <Carousel
+        onChange={(currentItem, pageIndex) => setCurrDest(pageIndex)}
+        ref={carouselRef}
+        // enableAutoPlay
+        // autoPlaySpeed={timeOut}
+        itemsToShow={1}
+        className="crew-carousel"
+      >
         <CrewComponent
           position=" COMMANDER"
           personName="Douglas Hurley"
@@ -41,6 +56,24 @@ function Crew() {
           image={anousheh}
         />
       </Carousel>
+      <div className="crew-buttons">
+        <button
+          className={currDest === 0 ? "active" : undefined}
+          onClick={() => carouselRef.current.goTo(0)}
+        ></button>
+        <button
+          className={currDest === 1 ? "active" : undefined}
+          onClick={() => carouselRef.current.goTo(1)}
+        ></button>
+        <button
+          className={currDest === 2 ? "active" : undefined}
+          onClick={() => carouselRef.current.goTo(2)}
+        ></button>
+        <button
+          className={currDest === 3 ? "active" : undefined}
+          onClick={() => carouselRef.current.goTo(3)}
+        ></button>
+      </div>
     </div>
   );
 }

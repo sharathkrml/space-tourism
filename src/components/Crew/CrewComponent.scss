@@ -1,4 +1,38 @@
 @use "../../mixins.scss" as mixin;
 .crew-component {
-  @include mixin.displayFlex(row, center, center);
+  @include mixin.displayFlex(row, center, flex-start);
+  height: 100%;
+  width: 80%;
+}
+.crew-position {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.631);
+  font-family: "Bellefair", sans-serif;
+}
+.person-desc {
+  color: rgba(255, 255, 255, 0.631);
+  font-family: "Barlow Condensed", sans-serif;
+  width: 65%;
+  line-height: 20px;
+}
+.person-name {
+  text-transform: uppercase;
+  font-size: 2.7em;
+  font-family: "Bellefair", sans-serif;
+  margin: 10px 0 15px 0;
+}
+.crew-details {
+  width: 60%;
+}
+.crew-image {
+  img {
+    display: block;
+    width: auto;
+    max-height: 75vh;
+    object-fit: contain;
+  }
+}
+.rec-pagination {
+  display: none !important;
 }

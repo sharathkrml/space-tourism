@@ -1,3 +1,7 @@
+:root {
+  --crew-btnsize: 15px;
+}
+
 .Crew {
   background: url(../../assets/crew/background-crew-desktop.jpg);
 
@@ -9,4 +13,31 @@
   }
   width: 100vw;
   height: 100vh;
+}
+.crew-carousel {
+  height: 75%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+}
+
+.crew-buttons {
+  position: fixed;
+  left: 10%;
+  bottom: 10%;
+  .active {
+    background-color: white;
+  }
+  button {
+    margin-right: 15px;
+    width: var(--crew-btnsize);
+    height: var(--crew-btnsize);
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.75);
+    }
+  }
 }

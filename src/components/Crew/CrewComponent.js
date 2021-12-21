@@ -9,7 +9,7 @@ function CrewComponent(props) {
         <div className="person-desc">{props.desc}</div>
       </div>
       <div className="crew-image">
-        <img src={props.image} alt="person" />
+        <img draggable={false} src={props.image} alt="person" />
       </div>
     </div>
   );
