@@ -11,13 +11,13 @@ function Crew() {
   const carouselRef = useRef(null);
   const [currDest, setCurrDest] = useState(0);
   const timeOut=2000;
-  // useEffect(() => {
-  //   if (currDest === 3) {
-  //     setTimeout(() => {
-  //       carouselRef.current.goTo(0);
-  //     }, timeOut);
-  //   }
-  // }, [currDest]);
+  useEffect(() => {
+    if (currDest === 3) {
+      setTimeout(() => {
+        carouselRef.current.goTo(0);
+      }, timeOut);
+    }
+  }, [currDest]);
   return (
     <div className="Crew">
       <div className="dest-banner">
@@ -26,8 +26,8 @@ function Crew() {
       <Carousel
         onChange={(currentItem, pageIndex) => setCurrDest(pageIndex)}
         ref={carouselRef}
-        // enableAutoPlay
-        // autoPlaySpeed={timeOut}
+        enableAutoPlay
+        autoPlaySpeed={timeOut}
         itemsToShow={1}
         className="crew-carousel"
       >

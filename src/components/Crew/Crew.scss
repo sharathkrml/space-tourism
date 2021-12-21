@@ -7,7 +7,8 @@
 
 .Crew {
   background: url(../../assets/crew/background-crew-desktop.jpg);
-
+  background-position: center;
+  background-size: cover;
   @media screen and (max-width: 768px) {
     background: url(../../assets/crew/background-crew-tablet.jpg);
   }
@@ -26,7 +27,7 @@
   position: fixed;
   bottom: 0;
   color: white;
-  animation:  slideInFromBottom 0.3s ease-in-out;
+  animation: slideInFromBottom 0.3s ease-in-out;
 }
 
 .crew-buttons {
