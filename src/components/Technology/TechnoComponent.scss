@@ -1,0 +1,60 @@
+@use "../../mixins.scss" as mixin;
+:root {
+  --techno-button-width: 40px;
+  --terminology-font: 0.7em;
+  --techno-name-font: 1.6em;
+  --techno-desc-font: 0.7em;
+}
+.techno-component {
+  @include mixin.displayFlex(row, center, center);
+}
+.techno-details {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  margin-right: 5%;
+}
+.terminology {
+  font-size: var(--terminology-font);
+  color: rgba(255, 255, 255, 0.487);
+}
+.techno-name {
+  font-size: var(--techno-name-font);
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  margin:10px 0 15px 0;
+}
+.techno-desc {
+  font-size: var(--techno-desc-font);
+  color: rgba(255, 255, 255, 0.487);
+  width: 80%;
+}
+.techno-buttons {
+  @include mixin.displayFlex(column, center, center);
+  margin-right: 5%;
+
+  .active {
+    background-color: white;
+    color: black;
+  }
+  button {
+    width: var(--techno-button-width);
+    height: var(--techno-button-width);
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.487);
+    margin: 10px 0;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid white;
+    }
+  }
+}
+.techno-image {
+  img {
+    display: block;
+    height: auto;
+    max-width: 30vw;
+  }
+}
