@@ -10,6 +10,7 @@ function CrewComponent(props) {
       </div>
       <div className="crew-image">
         <img draggable={false} src={props.image} alt="person" />
+        <hr />
       </div>
     </div>
   );
