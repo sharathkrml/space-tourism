@@ -8,8 +8,26 @@ function CrewComponent(props) {
         <div className="person-name">{props.personName}</div>
         <div className="person-desc">{props.desc}</div>
       </div>
+      <div className="crew-buttons-mob btn-mob">
+        <button
+          className={props.currDest === 0 ? "active" : undefined}
+          onClick={() => props.goTo(0)}
+        ></button>
+        <button
+          className={props.currDest === 1 ? "active" : undefined}
+          onClick={() => props.goTo(1)}
+        ></button>
+        <button
+          className={props.currDest === 2 ? "active" : undefined}
+          onClick={() => props.goTo(2)}
+        ></button>
+        <button
+          className={props.currDest === 3 ? "active" : undefined}
+          onClick={() => props.goTo(3)}
+        ></button>
+      </div>
       <div className="crew-image">
-        <img draggable={false} src={props.image} alt="person" />
+        <img src={props.image} alt="person" />
         <hr />
       </div>
     </div>

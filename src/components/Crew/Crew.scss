@@ -34,30 +34,16 @@
   position: relative;
   top: 85%;
   left: 10%;
-  @media screen and (max-width: 768px) {
-    top: 30%;
-    left: 43%;
-    width: 50%;
-  }
-  @media screen and (max-width: 700px) {
-    top: 28%;
-  }
-  @media screen and (max-width: 637px) {
-    top: 30%;
-  }
-  @media screen and (max-width: 510px) {
-    left: 41%;
-  }
-  @media screen and (max-width: 430px) {
-    top: 37.5%;
-    left: 38%;
-  }
   width: 90%;
+ 
   .active {
     background-color: white;
   }
   button {
     margin-right: 15px;
+    @media screen and (max-width: 768px) {
+      margin: 0 5px;
+    }
     width: var(--crew-btnsize);
     height: var(--crew-btnsize);
     border-radius: 50%;

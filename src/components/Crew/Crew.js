@@ -10,7 +10,8 @@ import anousheh from "../../assets/crew/image-anousheh-ansari.png";
 function Crew() {
   const carouselRef = useRef(null);
   const [currDest, setCurrDest] = useState(0);
-  const timeOut=2000;
+  const timeOut = 2000;
+  const goTo = (n) => carouselRef.current.goTo(n);
   useEffect(() => {
     if (currDest === 3) {
       setTimeout(() => {
@@ -26,37 +27,45 @@ function Crew() {
       <Carousel
         onChange={(currentItem, pageIndex) => setCurrDest(pageIndex)}
         ref={carouselRef}
-        enableAutoPlay
-        autoPlaySpeed={timeOut}
+        // enableAutoPlay
+        // autoPlaySpeed={timeOut}
         itemsToShow={1}
         className="crew-carousel"
       >
         <CrewComponent
+          currDest={currDest}
+          goTo={goTo}
           position=" COMMANDER"
           personName="Douglas Hurley"
           desc="Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2. "
           image={douglas}
         />
         <CrewComponent
+          currDest={currDest}
+          goTo={goTo}
           position=" Mission Specialist"
           personName="Mark Shuttleworth"
           desc="Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist. "
           image={mark}
         />
         <CrewComponent
+          currDest={currDest}
+          goTo={goTo}
           position="Pilot"
           personName="Victor Glover"
           desc="Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer. "
           image={victor}
         />
         <CrewComponent
+          currDest={currDest}
+          goTo={goTo}
           position="Flight Engineer"
           personName="Anousheh Ansari"
           desc="Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space. "
           image={anousheh}
         />
       </Carousel>
-      <div className="crew-buttons">
+      <div className="crew-buttons btn-desktop">
         <button
           className={currDest === 0 ? "active" : undefined}
           onClick={() => carouselRef.current.goTo(0)}
