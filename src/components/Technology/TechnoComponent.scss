@@ -10,7 +10,6 @@
   @media screen and (max-width: 768px) {
     margin-top: 10px;
     @include mixin.displayFlex(column-reverse, center, center);
-    border: 1px solid red;
   }
 }
 .techno-details {

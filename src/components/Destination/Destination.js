@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Destination.scss";
 import DestComponent from "./DestComponent";
 import Carousel from "react-elastic-carousel";
@@ -11,6 +11,16 @@ function Destination() {
   const carouselRef = useRef(null);
   const [currDest, setCurrDest] = useState(0);
   const goTo = (n) => carouselRef.current.goTo(n);
+  const timeOut = 3000;
+
+  useEffect(() => {
+    if (currDest === 3) {
+      setTimeout(() => {
+        carouselRef.current.goTo(0);
+      }, timeOut);
+    }
+  }, [currDest]);
+
   return (
     <div className="destination">
       <div className="dest-banner">
@@ -50,8 +60,8 @@ function Destination() {
               onChange={(currentItem, pageIndex) => setCurrDest(pageIndex)}
               ref={carouselRef}
               itemsToShow={1}
-              // enableAutoPlay
-              // autoPlaySpeed={1500}
+              enableAutoPlay
+              autoPlaySpeed={timeOut}
             >
               <DestComponent
                 currDest={currDest}

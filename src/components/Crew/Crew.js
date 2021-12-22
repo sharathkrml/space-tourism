@@ -10,7 +10,7 @@ import anousheh from "../../assets/crew/image-anousheh-ansari.png";
 function Crew() {
   const carouselRef = useRef(null);
   const [currDest, setCurrDest] = useState(0);
-  const timeOut = 2000;
+  const timeOut = 3000;
   const goTo = (n) => carouselRef.current.goTo(n);
   useEffect(() => {
     if (currDest === 3) {
@@ -27,8 +27,8 @@ function Crew() {
       <Carousel
         onChange={(currentItem, pageIndex) => setCurrDest(pageIndex)}
         ref={carouselRef}
-        // enableAutoPlay
-        // autoPlaySpeed={timeOut}
+        enableAutoPlay
+        autoPlaySpeed={timeOut}
         itemsToShow={1}
         className="crew-carousel"
       >

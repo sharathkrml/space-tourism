@@ -16,7 +16,15 @@ function Technology() {
   const [isMobile, setIsMobile] = useState(getIsMobile());
   const carouselRef = useRef(null);
   const [currDest, setCurrDest] = useState(0);
+  const timeOut = 3000;
 
+  useEffect(() => {
+    if (currDest === 2) {
+      setTimeout(() => {
+        carouselRef.current.goTo(0);
+      }, timeOut);
+    }
+  }, [currDest]);
   useEffect(() => {
     const onResize = () => {
       setIsMobile(getIsMobile());
@@ -39,6 +47,8 @@ function Technology() {
           itemsToShow={1}
           className="techno-carousel"
           verticalMode={!isMobile}
+          enableAutoPlay
+          autoPlaySpeed={timeOut}
         >
           <TechnoComponent
             goTo={goTo}
