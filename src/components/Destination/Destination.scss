@@ -10,7 +10,6 @@
   @media screen and (max-width: 375px) {
     background: url(../../assets/destination/background-destination-mobile.jpg);
     height: 130vh;
-
   }
   width: 100vw;
   height: 100vh;
@@ -20,7 +19,7 @@
   top: 25%;
   left: 10%;
   width: 90%;
-  
+
   @media screen and (max-width: 768px) {
     top: 10%;
     left: 10%;
@@ -45,12 +44,6 @@
 }
 
 .dest-carousel-buttons {
-  @media screen and (max-width: 768px) {
-    z-index: 10;
-    top: 14em;
-    left: auto;
-  }
-
   position: absolute;
   top: 35%;
   left: 60%;
@@ -92,38 +85,4 @@
 .rec-arrow,
 .rec-dot {
   display: none;
-}
-@media screen and (max-width: 500px) {
-  .dest-carousel-buttons {
-    top: 13em;
-  }
-}
-@media screen and (max-width: 470px) {
-  .dest-carousel-buttons {
-    top: 12em;
-  }
-  .dest-carousel-buttons button {
-    font-size: 0.9em;
-  }
-}
-@media screen and (max-width: 370px) {
-  .dest-carousel-buttons {
-    top: 9em;
-  }
-  .dest-carousel-buttons button {
-    font-size: 0.8em;
-  }
-}
-@media screen and (max-width: 320px) {
-  .dest-carousel-buttons {
-    top: 8em;
-  }
-}
-@media screen and (max-width: 280px) {
-  .dest-carousel-buttons {
-    top: 7em;
-  }
-  .dest-carousel-buttons button {
-    font-size: 0.7em;
-  }
 }

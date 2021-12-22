@@ -6,6 +6,32 @@ function DestComponent(props) {
       <div className="dest-image">
         <img src={props.img} alt="dest" />
       </div>
+      <div className="dest-switch-btn btn-mob">
+        <button
+          className={props.currDest === 0 ? "active" : undefined}
+          onClick={() => props.goTo(0)}
+        >
+          MOON
+        </button>
+        <button
+          className={props.currDest === 1 ? "active" : undefined}
+          onClick={() => props.goTo(1)}
+        >
+          MARS
+        </button>
+        <button
+          className={props.currDest === 2 ? "active" : undefined}
+          onClick={() => props.goTo(2)}
+        >
+          EUROPA
+        </button>
+        <button
+          className={props.currDest === 3 ? "active" : undefined}
+          onClick={() => props.goTo(3)}
+        >
+          TITAN
+        </button>
+      </div>
       <div className="dest-details">
         <div className="dest-title">{props.title}</div>
         <div className="dest-desc">{props.details}</div>

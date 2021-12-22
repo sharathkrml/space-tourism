@@ -10,7 +10,6 @@
   @media screen and (max-width: 768px) {
     width: 80%;
     text-align: center;
-    margin-top: 13%;
   }
   @media screen and (max-width: 375px) {
     width: 90%;
@@ -89,5 +88,23 @@
 .avg-dist {
   @media screen and (max-width: 375px) {
     margin-bottom: 0.8em;
+  }
+}
+.dest-switch-btn {
+  margin-top: 10px;
+  .active {
+    border-bottom: 2px solid white;
+  }
+  button {
+    background-color: transparent;
+    font-family: "Barlow Condensed", sans-serif;
+
+    color: white;
+    border: none;
+    margin: 0 10px;
+    padding-bottom: 10px;
+    &:hover {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.508);
+    }
   }
 }
