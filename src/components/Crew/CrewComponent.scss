@@ -91,9 +91,11 @@
 .crew-buttons-mob {
   top: 0;
   left: 0;
-  display: flex !important;
-  flex-direction: row;
-  justify-content: center;
+  @media screen and (max-width: 768px) {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
   margin: 10px auto;
   .active {
     background-color: white;
